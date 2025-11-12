@@ -28,7 +28,7 @@ export default function ContactSection() {
             <CardContent>
               <Button
                 className="w-full bg-green-600 hover:bg-green-700 text-white"
-                onClick={() => window.open("https://wa.me/6289532894943", "_blank")}
+                onClick={() => window.open("https://wa.me/62895328949434", "_blank")}
               >
                 <MessageCircle className="mr-2 h-4 w-4" />
                 Chat di WhatsApp
@@ -63,11 +63,11 @@ export default function ContactSection() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-muted-foreground">
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <span>+62 895-3289-4943</span>
+              <span>+62 895-3289-49434</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4" />
-              <span>Melayani seluruh Indonesia</span>
+              <span>Melayani wilayah Bekasi</span>
             </div>
           </div>
         </div>
