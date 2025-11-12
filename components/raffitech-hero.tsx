@@ -49,7 +49,7 @@ export function RaffiTechHero() {
             <div className="mx-auto max-w-7xl px-6">
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                 <Link
-                  href="https://wa.me/6289532894943"
+                  href="https://wa.me/62895328949434"
                   className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
                 >
                   <span className="text-foreground text-sm">Konsultasi Gratis Tersedia</span>
