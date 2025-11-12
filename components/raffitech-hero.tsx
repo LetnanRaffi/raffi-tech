@@ -222,7 +222,7 @@ const HeroHeader = () => {
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <ThemeToggle />
                 <Button asChild size="sm" className={cn(isScrolled ? "lg:inline-flex" : "hidden")}>
-                  <Link href="https://wa.me/6289532894943">
+                  <Link href="https://wa.me/62895328949434">
                     <span>Hubungi Kami</span>
                   </Link>
                 </Button>
