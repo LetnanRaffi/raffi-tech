@@ -78,7 +78,7 @@ export function RaffiTechHero() {
                 <div className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
                   <div className="rounded-[14px] border p-0.5">
                     <Button asChild size="lg" className="rounded-xl px-5 text-base">
-                      <Link href="https://wa.me/6289532894943">
+                      <Link href="https://wa.me/62895328949434">
                         <span className="text-nowrap">Hubungi Sekarang</span>
                       </Link>
                     </Button>
