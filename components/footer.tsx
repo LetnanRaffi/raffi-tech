@@ -56,7 +56,7 @@ export default function Footer() {
 
         <div className="border-t border-sidebar-border mt-8 pt-8 text-center">
           <p className="text-sidebar-foreground/60 flex items-center justify-center gap-2">
-            <span>© 2024 RaffiTech Solutions. Made with</span>
+            <span>© 2025 RaffiTech Solutions. Made with</span>
             <Heart className="h-4 w-4 text-red-500 fill-current" />
             <span>and</span>
             <Code className="h-4 w-4 text-sidebar-primary" />
