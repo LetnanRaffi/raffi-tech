@@ -18,20 +18,19 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* WhatsApp Contact */}
           <Card className="border-border hover:shadow-lg transition-shadow duration-300">
-            <CardHeader>
-              <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-4">
-                <MessageCircle className="h-6 w-6 text-green-600 dark:text-green-400" />
+            <CardHeader className="pb-2">
+              <div className="w-16 h-16 bg-green-100 dark:bg-green-900/20 rounded-2xl flex items-center justify-center mb-2 mx-auto">
+                <MessageCircle className="h-8 w-8 text-green-600 dark:text-green-500" />
               </div>
-              <CardTitle className="text-xl text-card-foreground">WhatsApp</CardTitle>
-              <CardDescription className="text-muted-foreground">Chat langsung untuk konsultasi cepat</CardDescription>
+              <CardTitle className="text-center text-xl hidden">WhatsApp</CardTitle>
             </CardHeader>
             <CardContent>
               <Button
-                className="w-full bg-green-600 hover:bg-green-700 text-white"
+                className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-6 text-lg"
                 onClick={() => window.open("https://wa.me/62895328949434", "_blank")}
               >
-                <MessageCircle className="mr-2 h-4 w-4" />
-                Chat di WhatsApp
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Hubungi via WhatsApp
               </Button>
             </CardContent>
           </Card>
@@ -59,18 +58,24 @@ export default function ContactSection() {
         </div>
 
         {/* Additional Contact Info */}
-        <div className="mt-12 text-center">
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              <span>+62 895-3289-49434</span>
+        {/* Additional Contact Info - Integrated into a card */}
+        <Card className="border-border md:col-span-2 bg-muted/30">
+          <CardContent className="flex flex-col sm:flex-row justify-center items-center gap-8 py-6 text-muted-foreground">
+            <div className="flex items-center gap-3">
+              <div className="bg-background p-2 rounded-full border">
+                <Phone className="h-5 w-5 text-primary" />
+              </div>
+              <span className="font-medium text-foreground">+62 895-3289-49434</span>
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4" />
-              <span>Melayani wilayah Bekasi</span>
+            <div className="hidden sm:block h-8 w-px bg-border"></div>
+            <div className="flex items-center gap-3">
+              <div className="bg-background p-2 rounded-full border">
+                <MapPin className="h-5 w-5 text-accent" />
+              </div>
+              <span className="font-medium text-foreground">Melayani wilayah Bekasi</span>
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   )

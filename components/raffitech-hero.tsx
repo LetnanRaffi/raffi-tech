@@ -2,6 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, ChevronRight, Menu, X, Monitor, Code, Settings, FileText, Wrench, Wifi } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -47,47 +48,83 @@ export function RaffiTechHero() {
               className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]"
             />
             <div className="mx-auto max-w-7xl px-6">
-              <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
-                <Link
-                  href="https://wa.me/62895328949434"
-                  className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
-                >
-                  <span className="text-foreground text-sm">Konsultasi Gratis Tersedia</span>
-                  <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                {/* Left Column: Content */}
+                <div className="text-center lg:text-left">
+                  <Link
+                    href="https://wa.me/62895328949434"
+                    className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto lg:mx-0 flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
+                  >
+                    <span className="text-foreground text-sm">Konsultasi Gratis Tersedia</span>
+                    <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
-                  <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
-                    <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
-                      <span className="flex size-6">
-                        <ArrowRight className="m-auto size-3" />
-                      </span>
-                      <span className="flex size-6">
-                        <ArrowRight className="m-auto size-3" />
-                      </span>
+                    <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
+                      <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
+                        <span className="flex size-6">
+                          <ArrowRight className="m-auto size-3" />
+                        </span>
+                        <span className="flex size-6">
+                          <ArrowRight className="m-auto size-3" />
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
 
-                <h1 className="mt-8 max-w-4xl mx-auto text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem] font-bold">
-                  RaffiTech <span className="text-primary">Solutions</span>
-                </h1>
-                <p className="mx-auto mt-8 max-w-2xl text-balance text-lg text-muted-foreground">
-                  Solusi teknologi terpercaya untuk kebutuhan digital Anda. Dari desain kreatif hingga perbaikan
-                  hardware, kami siap membantu mengembangkan bisnis Anda.
-                </p>
+                  <h1 className="mt-8 text-balance text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                    RaffiTech <br /><span className="text-primary">Solutions</span>
+                  </h1>
+                  <p className="mt-6 text-lg text-muted-foreground text-balance max-w-xl mx-auto lg:mx-0">
+                    Solusi teknologi terpercaya untuk kebutuhan digital Anda. Dari desain kreatif hingga perbaikan
+                    hardware, kami siap membantu mengembangkan bisnis Anda.
+                  </p>
 
-                <div className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
-                  <div className="rounded-[14px] border p-0.5">
-                    <Button asChild size="lg" className="rounded-xl px-5 text-base">
+                  <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+                    <Button asChild size="lg" className="rounded-xl px-8 py-6 text-base bg-white text-black hover:bg-white/90 font-semibold shadow-lg shadow-primary/20">
                       <Link href="https://wa.me/62895328949434">
                         <span className="text-nowrap">Hubungi Sekarang</span>
                       </Link>
                     </Button>
+                    <Button asChild size="lg" variant="outline" className="h-auto py-3 rounded-xl px-8 text-base border-white text-white hover:bg-white hover:text-black transition-colors">
+                      <Link href="#services">
+                        <span className="text-nowrap">Lihat Layanan</span>
+                      </Link>
+                    </Button>
                   </div>
-                  <Button asChild size="lg" variant="ghost" className="h-10.5 rounded-xl px-5">
-                    <Link href="#services">
-                      <span className="text-nowrap">Lihat Layanan</span>
-                    </Link>
-                  </Button>
+                </div>
+
+                {/* Right Column: Visuals */}
+                <div className="hidden lg:flex justify-center items-center relative">
+                  <div className="relative w-full aspect-square max-w-md">
+                    {/* Abstract Tech Visual using existing icons */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+
+                    <div className="relative z-10 grid grid-cols-2 gap-4">
+                      <div className="space-y-4 translate-y-8">
+                        <div className="bg-card/50 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-xl transform hover:scale-105 transition-transform duration-300">
+                          <Code className="w-10 h-10 text-primary mb-3" />
+                          <div className="h-2 w-20 bg-primary/20 rounded mb-2"></div>
+                          <div className="h-2 w-12 bg-primary/20 rounded"></div>
+                        </div>
+                        <div className="bg-card/50 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-xl transform hover:scale-105 transition-transform duration-300">
+                          <Monitor className="w-10 h-10 text-accent mb-3" />
+                          <div className="h-2 w-20 bg-accent/20 rounded mb-2"></div>
+                          <div className="h-2 w-12 bg-accent/20 rounded"></div>
+                        </div>
+                      </div>
+                      <div className="space-y-4 -translate-y-4">
+                        <div className="bg-card/50 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-xl transform hover:scale-105 transition-transform duration-300">
+                          <Settings className="w-10 h-10 text-blue-400 mb-3" />
+                          <div className="h-2 w-20 bg-blue-400/20 rounded mb-2"></div>
+                          <div className="h-2 w-12 bg-blue-400/20 rounded"></div>
+                        </div>
+                        <div className="bg-card/50 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-xl transform hover:scale-105 transition-transform duration-300">
+                          <Wifi className="w-10 h-10 text-green-400 mb-3" />
+                          <div className="h-2 w-20 bg-green-400/20 rounded mb-2"></div>
+                          <div className="h-2 w-12 bg-green-400/20 rounded"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -149,6 +186,7 @@ export function RaffiTechHero() {
 const menuItems = [
   { name: "Beranda", href: "#home" },
   { name: "Layanan", href: "#services" },
+  { name: "Portfolio", href: "#portfolio" },
   { name: "Keahlian", href: "#skills" },
   { name: "Kontak", href: "#contact" },
 ]
@@ -221,7 +259,7 @@ const HeroHeader = () => {
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <ThemeToggle />
-                <Button asChild size="sm" className={cn(isScrolled ? "lg:inline-flex" : "hidden")}>
+                <Button asChild size="sm" className={cn("bg-white text-black hover:bg-white/90 font-semibold", isScrolled ? "lg:inline-flex" : "hidden")}>
                   <Link href="https://wa.me/62895328949434">
                     <span>Hubungi Kami</span>
                   </Link>
@@ -238,9 +276,13 @@ const HeroHeader = () => {
 const Logo = ({ className }: { className?: string }) => {
   return (
     <div className={cn("flex items-center space-x-2", className)}>
-      <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-        <span className="text-primary-foreground font-bold text-sm">RT</span>
-      </div>
+      <Image
+        src="/logo/photo_6246947705343118562_y.jpg"
+        alt="RaffiTech Logo"
+        width={36}
+        height={36}
+        className="rounded-lg"
+      />
       <span className="text-xl font-bold text-foreground">RaffiTech</span>
     </div>
   )

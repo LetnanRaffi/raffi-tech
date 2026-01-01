@@ -42,8 +42,8 @@ export default function ServicesSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 glitch-effect">
-            <span className="text-accent">&gt;</span> Layanan Kami <span className="text-primary">_</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Layanan Kami
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Solusi teknologi terdepan untuk kebutuhan digital era modern
@@ -54,11 +54,11 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="hover:shadow-lg transition-all duration-300 border-accent/50 bg-card/80 backdrop-blur-sm cyberpunk-border hover:scale-105 hover:neon-glow group"
+              className="hover:shadow-lg transition-all duration-300 border border-white/10 bg-card hover:border-accent/50 hover:scale-105 group"
             >
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center mb-4 group-hover:pulse-neon">
-                  <service.icon className="h-6 w-6 text-primary group-hover:text-accent transition-colors duration-300" />
+                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
+                  <service.icon className="h-6 w-6 text-white transition-colors duration-300" />
                 </div>
                 <CardTitle className="text-xl text-card-foreground group-hover:text-accent transition-colors duration-300">
                   {service.title}

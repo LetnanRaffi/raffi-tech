@@ -24,8 +24,8 @@ export default function SkillsSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 glitch-effect">
-            <span className="text-primary">{">"}</span> Keahlian Tambahan <span className="text-accent">_</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Keahlian Teknis
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Skill teknis advanced yang kami kuasai untuk mendukung infrastruktur IT perusahaan
@@ -36,11 +36,11 @@ export default function SkillsSection() {
           {skills.map((skill, index) => (
             <Card
               key={index}
-              className="hover:shadow-lg transition-all duration-300 border-primary/50 bg-card/80 backdrop-blur-sm cyberpunk-border hover:scale-105 hover:neon-glow group"
+              className="hover:shadow-lg transition-all duration-300 border border-white/10 bg-card hover:border-primary/50 hover:scale-105 group"
             >
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg flex items-center justify-center mb-4 group-hover:pulse-neon">
-                  <skill.icon className="h-6 w-6 text-accent group-hover:text-primary transition-colors duration-300" />
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors">
+                  <skill.icon className="h-6 w-6 text-white transition-colors duration-300" />
                 </div>
                 <CardTitle className="text-xl text-card-foreground group-hover:text-primary transition-colors duration-300">
                   {skill.title}
