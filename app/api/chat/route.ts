@@ -33,20 +33,22 @@ INSTRUKSI:
 - Jangan jawab pertanyaan yang tidak relevan dengan layanan IT/teknologi`
 
 export async function POST(request: NextRequest) {
-    try {
-        const { messages } = await request.json()
+  try {
+    const { messages } = await request.json()
 
-        if (!messages || !Array.isArray(messages)) {
-            return NextResponse.json(
-                { error: "Messages array is required" },
-                { status: 400 }
-            )
-        }
+    if (!messages || !Array.isArray(messages)) {
+      return NextResponse.json(
+        { error: "Messages array is required" },
+        { status: 400 }
+      )
+    }
 
-        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-            method: "POST",
-            headers: {
-                "Authorization": \`Bearer \${process.env.OPENROUTER_API_KEY}\`,
+    const apiKey = process.env.OPENROUTER_API_KEY
+
+    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + apiKey,
         "Content-Type": "application/json",
         "HTTP-Referer": "https://raffitech.vercel.app",
         "X-Title": "RaffiTech AI Assistant",
