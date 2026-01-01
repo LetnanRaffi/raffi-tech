@@ -4,6 +4,7 @@ import PortfolioSection from "@/components/portfolio-section"
 import SkillsSection from "@/components/skills-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
+import ChatWidget from "@/components/chat-widget"
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <SkillsSection />
       <ContactSection />
       <Footer />
+      <ChatWidget />
     </main>
   )
 }
+
