@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
         "X-Title": "RaffiTech AI Assistant",
       },
       body: JSON.stringify({
-        model: "tngtech/deepseek-r1t-chimera:free",
+        model: "meta-llama/llama-3.3-70b-instruct:free",
         messages: [
           { role: "system", content: SYSTEM_PROMPT },
           ...messages
