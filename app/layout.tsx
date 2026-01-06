@@ -8,9 +8,9 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "RaffiTech Solutions - Jasa IT & Web Development Profesional Bekasi",
+  title: "RaffiTech Solutions - Jasa IT, Service Laptop & Jaringan Bekasi | Murah & Bergaransi",
   description:
-    "Solusi teknologi terpercaya di Bekasi: Pembuatan Website Modern, Desain Grafis, Install Ulang PC/Laptop, Jasa Pengetikan, Laporan PKL, Perbaikan Hardware & Setting Jaringan. Konsultasi GRATIS!",
+    "Laptop lemot? WiFi ngadat? RaffiTech solusinya! Jasa IT panggilan Bekasi: Service Laptop, Install Ulang, Web Development & Mikrotik. Murah, bergaransi, konsultasi GRATIS!",
   generator: "RaffiTech Solutions",
   keywords: [
     "jasa website bekasi",
