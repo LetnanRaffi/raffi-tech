@@ -1,5 +1,6 @@
 import { RaffiTechHero } from "@/components/raffitech-hero"
 import ServicesSection from "@/components/services-section"
+import TestimonialsSection from "@/components/testimonials-section"
 import PortfolioSection from "@/components/portfolio-section"
 import SkillsSection from "@/components/skills-section"
 import ContactSection from "@/components/contact-section"
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="min-h-screen">
       <RaffiTechHero />
       <ServicesSection />
+      <TestimonialsSection />
       <PortfolioSection />
       <SkillsSection />
       <ContactSection />
@@ -19,4 +21,3 @@ export default function Home() {
     </main>
   )
 }
-

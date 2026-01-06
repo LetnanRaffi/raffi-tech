@@ -1,36 +1,48 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Palette, Globe, RotateCcw, FileText, ClipboardList } from "lucide-react"
+import { Palette, Globe, RotateCcw, FileText, ClipboardList, Wifi } from "lucide-react"
 
 const services = [
   {
     icon: Palette,
     title: "Jasa Desain",
     description:
-      "Desain grafis profesional menggunakan Canva, Photoshop, dan tools desain terkini untuk branding, logo, dan materi promosi bisnis Anda.",
+      "Tingkatkan citra bisnis Anda dengan desain profesional untuk logo, banner, dan materi promosi. Tampil lebih meyakinkan di era digital!",
+    price: "Mulai Rp 30.000",
   },
   {
     icon: Globe,
     title: "Pembuatan Website",
     description:
-      "Website responsif dan modern untuk bisnis, portfolio, atau toko online dengan teknologi terkini dan desain modern yang profesional.",
+      "Website modern dan mobile-friendly untuk bisnis UMKM, portfolio, atau toko online. Tampilan profesional yang bikin pelanggan makin percaya!",
+    price: "Mulai Rp 200.000",
   },
   {
     icon: RotateCcw,
-    title: "Install Ulang Komputer/Laptop",
+    title: "Install Ulang & Service",
     description:
-      "Instalasi ulang sistem operasi, software, dan optimasi performa komputer atau laptop dengan teknologi terdepan.",
+      "Laptop lemot? Sering hang atau bluescreen? Serahkan ke ahlinya! Performa kembali ngebut, data aman, dan bergaransi. Proses cepat!",
+    price: "Mulai Rp 50.000",
+  },
+  {
+    icon: Wifi,
+    title: "Setting Jaringan & Mikrotik",
+    description:
+      "WiFi lemot sampai ke kamar? Kami atur jaringan dengan Mikrotik agar koneksi stabil ke seluruh rumah, aman, dan bisa kontrol pemakaian!",
+    price: "Mulai Rp 150.000",
   },
   {
     icon: FileText,
     title: "Jasa Ngetik",
     description:
-      "Layanan pengetikan dokumen menggunakan Microsoft Word, Excel, PowerPoint, dan Google Workspace dengan akurasi tinggi dan format profesional.",
+      "Layanan pengetikan dokumen Word, Excel, PowerPoint dengan akurasi tinggi dan format profesional. Hemat waktu Anda!",
+    price: "Hubungi Kami",
   },
   {
     icon: ClipboardList,
     title: "Pembuatan Laporan PKL",
     description:
-      "Bantuan penyusunan laporan Praktek Kerja Lapangan dengan format yang rapi, profesional, dan sesuai standar akademik.",
+      "Bantuan penyusunan laporan PKL dengan format rapi, profesional, dan sesuai standar akademik. Lulus tanpa ribet!",
+    price: "Hubungi Kami",
   },
 ]
 
@@ -65,9 +77,12 @@ export default function ServicesSection() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-muted-foreground text-pretty group-hover:text-foreground transition-colors duration-300">
+                <CardDescription className="text-muted-foreground text-pretty group-hover:text-foreground transition-colors duration-300 mb-3">
                   {service.description}
                 </CardDescription>
+                <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                  {service.price}
+                </div>
               </CardContent>
             </Card>
           ))}

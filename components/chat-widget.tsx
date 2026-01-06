@@ -16,7 +16,7 @@ export default function ChatWidget() {
     const [messages, setMessages] = useState<Message[]>([
         {
             role: "assistant",
-            content: "Halo! Selamat datang di RaffiTech Solutions. Ada yang bisa kami bantu hari ini?"
+            content: "Halo! 👋 Saya RaffiBot, asisten AI pintar dari RaffiTech. Saya siap membantu 24 jam! Ada pertanyaan seputar layanan IT kami?"
         }
     ])
     const [input, setInput] = useState("")
@@ -143,10 +143,10 @@ export default function ChatWidget() {
                                 <MessageSquare className="w-5 h-5" />
                             </div>
                             <div>
-                                <h3 className="font-semibold text-sm">Customer Support</h3>
+                                <h3 className="font-semibold text-sm">RaffiBot Assistant</h3>
                                 <div className="flex items-center gap-1.5">
                                     <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                                    <span className="text-xs opacity-80">Online</span>
+                                    <span className="text-xs opacity-80">AI Online 24/7</span>
                                 </div>
                             </div>
                         </div>
