@@ -74,11 +74,11 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Layanan Utama</h4>
             <ul className="space-y-2 text-sidebar-foreground/80 text-sm">
-              <li>Desain Grafis</li>
+              <li>Install Ulang Software</li>
               <li>Pembuatan Website</li>
-              <li>Install Ulang PC/Laptop</li>
               <li>Setting Jaringan & Mikrotik</li>
-              <li>Jasa Pengetikan</li>
+              <li>Desain Grafis</li>
+              <li>Remote Support</li>
             </ul>
           </div>
 

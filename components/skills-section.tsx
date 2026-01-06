@@ -1,18 +1,34 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Wrench, Wifi } from "lucide-react"
+import { Lightbulb, Terminal, Shield, Zap } from "lucide-react"
 
 const skills = [
   {
-    icon: Wrench,
-    title: "Perbaikan Hardware Komputer/Laptop",
+    icon: Lightbulb,
+    title: "Problem Solving",
     description:
-      "Diagnosa dan perbaikan komponen hardware seperti motherboard, RAM, SSD, dan komponen lainnya dengan teknologi diagnostik terdepan.",
+      "Mampu mendiagnosa error sistem operasi yang rumit yang tidak bisa diselesaikan teknisi biasa. Dari bluescreen misterius sampai virus membandel, kami pecahkan dengan logika.",
+    highlight: "Analytical Thinking",
   },
   {
-    icon: Wifi,
-    title: "Setting Jaringan",
+    icon: Terminal,
+    title: "Scripting & CLI",
     description:
-      "Konfigurasi jaringan LAN, WiFi, router, dan troubleshooting masalah konektivitas internet dengan protokol keamanan tingkat enterprise.",
+      "Terbiasa menggunakan Script Mikrotik dan Command Line (Terminal/Linux) untuk efisiensi. Automasi tugas repetitif? Serahkan ke script!",
+    highlight: "Automation Expert",
+  },
+  {
+    icon: Zap,
+    title: "Web Optimization",
+    description:
+      "Tidak hanya membuat web, tapi memastikan loading cepat (SEO Friendly), responsive di semua perangkat, dan aman dari serangan hacker.",
+    highlight: "Performance Focused",
+  },
+  {
+    icon: Shield,
+    title: "Security Mindset",
+    description:
+      "Menerapkan best practice keamanan: password management, firewall setup, backup strategy, dan proteksi dari malware/ransomware.",
+    highlight: "Cyber Aware",
   },
 ]
 
@@ -24,30 +40,40 @@ export default function SkillsSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <span className="text-primary font-medium text-sm uppercase tracking-wider">Software & Network Engineer</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 mt-2">
             Keahlian Teknis
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Skill teknis advanced yang kami kuasai untuk mendukung infrastruktur IT perusahaan
+            Bukan cuma bisa install ulang — tapi memecahkan masalah dengan <span className="text-foreground font-medium">logika dan kode</span>.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {skills.map((skill, index) => (
             <Card
               key={index}
-              className="hover:shadow-lg transition-all duration-300 border border-white/10 bg-card hover:border-primary/50 hover:scale-105 group"
+              className="hover:shadow-lg transition-all duration-300 border border-white/10 bg-card hover:border-primary/50 group"
             >
-              <CardHeader>
-                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors">
-                  <skill.icon className="h-6 w-6 text-white transition-colors duration-300" />
+              <CardHeader className="pb-3">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                    <skill.icon className="h-6 w-6 text-primary transition-colors duration-300" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <CardTitle className="text-lg text-card-foreground group-hover:text-primary transition-colors duration-300">
+                        {skill.title}
+                      </CardTitle>
+                      <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 bg-primary/10 text-primary rounded-full">
+                        {skill.highlight}
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <CardTitle className="text-xl text-card-foreground group-hover:text-primary transition-colors duration-300">
-                  {skill.title}
-                </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-muted-foreground text-pretty group-hover:text-foreground transition-colors duration-300">
+                <CardDescription className="text-muted-foreground text-pretty group-hover:text-foreground/80 transition-colors duration-300">
                   {skill.description}
                 </CardDescription>
               </CardContent>

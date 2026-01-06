@@ -2,10 +2,13 @@ import { RaffiTechHero } from "@/components/raffitech-hero"
 import PromoBanner from "@/components/promo-banner"
 import ServicesSection from "@/components/services-section"
 import HowItWorksSection from "@/components/how-it-works-section"
+import RemoteSupportSection from "@/components/remote-support-section"
+import MaintenancePackagesSection from "@/components/maintenance-packages-section"
 import TestimonialsSection from "@/components/testimonials-section"
 import WhyChooseUsSection from "@/components/why-choose-us-section"
 import PortfolioSection from "@/components/portfolio-section"
 import TechStackSection from "@/components/tech-stack-section"
+import DigitalProductsSection from "@/components/digital-products-section"
 import AboutFounderSection from "@/components/about-founder-section"
 import SkillsSection from "@/components/skills-section"
 import FAQSection from "@/components/faq-section"
@@ -22,10 +25,13 @@ export default function Home() {
       <RaffiTechHero />
       <ServicesSection />
       <HowItWorksSection />
+      <RemoteSupportSection />
+      <MaintenancePackagesSection />
       <TestimonialsSection />
       <WhyChooseUsSection />
       <PortfolioSection />
       <TechStackSection />
+      <DigitalProductsSection />
       <AboutFounderSection />
       <SkillsSection />
       <FAQSection />

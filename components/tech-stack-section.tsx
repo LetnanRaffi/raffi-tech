@@ -1,4 +1,4 @@
-import { Cpu, Code, Palette, Server } from "lucide-react"
+import { Code, Palette, Server, Terminal } from "lucide-react"
 
 const techStacks = [
     {
@@ -6,7 +6,7 @@ const techStacks = [
         icon: Server,
         color: "text-blue-500",
         bgColor: "bg-blue-500/10",
-        techs: ["Mikrotik RouterOS", "Cisco", "Fiber Optic", "UniFi"],
+        techs: ["Mikrotik RouterOS", "Cisco Basics", "UniFi System", "VLAN & QoS"],
     },
     {
         category: "Web Development",
@@ -23,11 +23,11 @@ const techStacks = [
         techs: ["Canva Pro", "Adobe Photoshop", "Figma", "Illustrator"],
     },
     {
-        category: "Hardware & System",
-        icon: Cpu,
+        category: "System & Scripting",
+        icon: Terminal,
         color: "text-orange-500",
         bgColor: "bg-orange-500/10",
-        techs: ["Windows & Linux", "Driver Management", "BIOS Tuning", "SSD Upgrade"],
+        techs: ["Windows & Linux", "PowerShell", "Bash Script", "Mikrotik Script"],
     },
 ]
 
@@ -43,7 +43,7 @@ export default function TechStackSection() {
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
                         Kami menggunakan <span className="text-primary font-semibold">tools standar industri terbaik</span> untuk hasil maksimal.
-                        Bukan tools bajakan yang membahayakan data Anda — tapi software berlisensi dan teknologi terkini.
+                        Bukan tools bajakan — software berlisensi dan teknologi terkini.
                     </p>
                 </div>
 
