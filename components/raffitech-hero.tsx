@@ -194,17 +194,41 @@ const menuItems = [
 const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false)
   const [isScrolled, setIsScrolled] = React.useState(false)
+  const [bannerHeight, setBannerHeight] = React.useState(0)
 
   React.useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
+
+    const updateBannerHeight = () => {
+      const banner = document.getElementById("promo-banner")
+      if (banner) {
+        setBannerHeight(banner.offsetHeight)
+      } else {
+        setBannerHeight(0)
+      }
+    }
+
+    // Initial check
+    updateBannerHeight()
+
+    // Check periodically for banner visibility changes
+    const interval = setInterval(updateBannerHeight, 500)
+
     window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    window.addEventListener("resize", updateBannerHeight)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("resize", updateBannerHeight)
+      clearInterval(interval)
+    }
   }, [])
+
   return (
     <header>
-      <nav data-state={menuState && "active"} className="fixed z-20 w-full px-2 group">
+      <nav data-state={menuState && "active"} className="fixed z-40 w-full px-2 group" style={{ top: `${bannerHeight}px` }}>
         <div
           className={cn(
             "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12",

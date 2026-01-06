@@ -21,7 +21,7 @@ export default function PromoBanner() {
     if (!isMounted || !isVisible) return null
 
     return (
-        <div className="relative bg-gradient-to-r from-primary via-primary/90 to-accent overflow-hidden">
+        <div id="promo-banner" className="sticky top-0 z-50 relative bg-gradient-to-r from-primary via-primary/90 to-accent overflow-hidden">
             {/* Animated background */}
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjIiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9nPjwvc3ZnPg==')] opacity-30"></div>
 
