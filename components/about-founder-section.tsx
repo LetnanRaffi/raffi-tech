@@ -16,7 +16,7 @@ export default function AboutFounderSection() {
 
                             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
                                 <Image
-                                    src="/logo/photo_6246947705343118562_y.jpg"
+                                    src="/logo/founder-raffi.jpg"
                                     alt="Raffi Pasha - Founder RaffiTech"
                                     fill
                                     className="object-cover"
@@ -39,7 +39,7 @@ export default function AboutFounderSection() {
 
                         <p className="text-muted-foreground leading-relaxed mb-6">
                             Seorang penggiat IT muda yang passionate dengan dunia <span className="text-foreground font-medium">teknologi jaringan dan coding</span>.
-                            Memulai dari hobi oprek komputer sejak SMA, sekarang saya ingin membantu lebih banyak orang mendapatkan
+                            Memulai dari hobi oprek komputer sejak SMK, sekarang saya ingin membantu lebih banyak orang mendapatkan
                             <span className="text-foreground font-medium"> solusi IT yang murah tapi tetap canggih</span>.
                         </p>
 
