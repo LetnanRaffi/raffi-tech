@@ -26,7 +26,12 @@ import {
     MonitorPlay,
     CheckSquare,
     Moon,
-    Sun
+    Sun,
+    XCircle,
+    CheckCircle,
+    HelpCircle,
+    AlertCircle,
+    Coffee
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -64,6 +69,25 @@ const systemRequirements = [
     { icon: Monitor, label: "Grafis Ringan", value: "Support Multi-Vendor", subtext: "Intel HD / NVIDIA / AMD Radeon" }
 ]
 
+const faqs = [
+    {
+        q: "Apakah data saya aman?",
+        a: "100% Aman. RaffiTech OS dibangun di atas basis Debian/Ubuntu LTS yang terkenal keamanan kelas dunia. Tidak ada telemetry atau tracker tersembunyi."
+    },
+    {
+        q: "Laptop saya Intel/AMD, bisa pakai?",
+        a: "Bisa banget! OS ini mendukung arsitektur 64-bit (x86_64) yang mencakup hampir semua laptop Intel (Core i3 ke atas) dan AMD (Ryzen/A-Series) keluaran 2011 sampai sekarang."
+    },
+    {
+        q: "Driver Wi-Fi dan VGA gimana?",
+        a: "Otomatis terdeteksi. Kernel Linux modern yang kami pakai sudah mencakup ribuan driver hardware secara default. Tinggal colok, nyala."
+    },
+    {
+        q: "Bisa buat nugas sekolah/kuliah?",
+        a: "Sangat bisa. Kamu tinggal install WPS Office atau Google Docs lewat browser Brave yang sudah tersedia."
+    }
+]
+
 export default function RaffiTechOSPage() {
     return (
         <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 selection:bg-cyan-500/30 transition-colors duration-300">
@@ -82,8 +106,11 @@ export default function RaffiTechOSPage() {
                             <a href="#features" className="text-slate-600 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-white transition-colors">
                                 Fitur
                             </a>
-                            <a href="#doc-install" className="text-slate-600 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-white transition-colors">
-                                Dokumentasi
+                            <a href="#comparison" className="text-slate-600 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-white transition-colors">
+                                Bandingkan
+                            </a>
+                            <a href="#faq" className="text-slate-600 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-white transition-colors">
+                                FAQ
                             </a>
                             <a href="#download" className="text-slate-600 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-white transition-colors">
                                 Download
@@ -112,9 +139,12 @@ export default function RaffiTechOSPage() {
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="max-w-4xl">
                         {/* Version Badge */}
-                        <div className="inline-flex items-center gap-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-cyan-600 dark:text-cyan-500 px-3 py-1 rounded text-xs font-mono font-medium mb-8 tracking-wide shadow-sm">
-                            <div className="w-1.5 h-1.5 rounded-full bg-cyan-600 dark:bg-cyan-500 animate-pulse"></div>
-                            v1.0 Ultimate • Stable Release
+                        <div className="flex flex-wrap items-center gap-3 mb-8">
+                            <div className="inline-flex items-center gap-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-cyan-600 dark:text-cyan-500 px-3 py-1 rounded text-xs font-mono font-medium tracking-wide shadow-sm">
+                                <div className="w-1.5 h-1.5 rounded-full bg-cyan-600 dark:bg-cyan-500 animate-pulse"></div>
+                                v1.0 Ultimate • Stable Release
+                            </div>
+                            <span className="text-xs font-mono text-slate-500">Build Date: 10 Jan 2026 - Latest Patch</span>
                         </div>
 
                         {/* Main Headline */}
@@ -176,6 +206,114 @@ export default function RaffiTechOSPage() {
                                 </p>
                             </div>
                         ))}
+                    </div>
+
+                </div>
+            </section>
+
+            {/* HEAD-TO-HEAD VS SECTION */}
+            <section id="comparison" className="py-24 border-b border-slate-200 dark:border-white/5">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Head-to-Head: Kenapa Harus Pindah?</h2>
+                        <p className="text-slate-600 dark:text-slate-400">Jangan buang waktu setup manual. Lihat bedanya.</p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        {/* Linux Biasa */}
+                        <div className="bg-slate-100 dark:bg-slate-900/50 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 opacity-90 grayscale-[0.5] hover:grayscale-0 transition-all">
+                            <h3 className="text-xl font-bold text-slate-700 dark:text-slate-400 mb-6 flex items-center gap-2">
+                                <XCircle className="w-6 h-6" /> Distro Linux Biasa (Polosan)
+                            </h3>
+                            <ul className="space-y-4">
+                                <li className="flex gap-3 text-slate-600 dark:text-slate-500">
+                                    <XCircle className="w-5 h-5 flex-shrink-0" />
+                                    <span><strong>Setup Awal:</strong> Kosong melompong, butuh 2 jam install tools.</span>
+                                </li>
+                                <li className="flex gap-3 text-slate-600 dark:text-slate-500">
+                                    <XCircle className="w-5 h-5 flex-shrink-0" />
+                                    <span><strong>Tampilan:</strong> Kaku, jadul, ngebosenin.</span>
+                                </li>
+                                <li className="flex gap-3 text-slate-600 dark:text-slate-500">
+                                    <XCircle className="w-5 h-5 flex-shrink-0" />
+                                    <span><strong>Mikrotik:</strong> Harus install Wine & config manual (sering error).</span>
+                                </li>
+                                <li className="flex gap-3 text-slate-600 dark:text-slate-500">
+                                    <XCircle className="w-5 h-5 flex-shrink-0" />
+                                    <span><strong>Multimedia:</strong> Codec sering belum lengkap.</span>
+                                </li>
+                                <li className="flex gap-3 text-slate-600 dark:text-slate-500">
+                                    <XCircle className="w-5 h-5 flex-shrink-0" />
+                                    <span><strong>Optimasi:</strong> Settingan standar pabrik (kadang berat).</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* RaffiTech OS */}
+                        <div className="bg-white dark:bg-slate-900 rings-2 ring-cyan-500/50 p-8 rounded-2xl border-2 border-cyan-500 shadow-2xl shadow-cyan-500/10 relative overflow-hidden transform md:-translate-y-4">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2 relative z-10">
+                                <CheckCircle className="w-6 h-6 text-cyan-500" /> RaffiTech OS v1.0
+                            </h3>
+                            <ul className="space-y-4 relative z-10">
+                                <li className="flex gap-3 text-slate-700 dark:text-slate-200">
+                                    <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" />
+                                    <span><strong>Setup Awal:</strong> Siap Pakai, tools Network Engineer sudah ada.</span>
+                                </li>
+                                <li className="flex gap-3 text-slate-700 dark:text-slate-200">
+                                    <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" />
+                                    <span><strong>Tampilan:</strong> Premium, ala MacOS WhiteSur yang elegan.</span>
+                                </li>
+                                <li className="flex gap-3 text-slate-700 dark:text-slate-200">
+                                    <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" />
+                                    <span><strong>Mikrotik:</strong> Winbox Native-Feel, tinggal klik langsung jalan.</span>
+                                </li>
+                                <li className="flex gap-3 text-slate-700 dark:text-slate-200">
+                                    <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" />
+                                    <span><strong>Multimedia:</strong> Full Multimedia Support (MP4, MKV ready).</span>
+                                </li>
+                                <li className="flex gap-3 text-slate-700 dark:text-slate-200">
+                                    <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" />
+                                    <span><strong>Optimasi:</strong> Tuned Kernel, bloatware dibuang, RAM lega.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* UNDER THE HOOD OPTIMIZATION */}
+            <section className="py-24 border-b border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-slate-950/50">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400 text-xs font-bold uppercase tracking-wider mb-4">
+                            <Settings className="w-3 h-3" /> Tuning Manual
+                        </div>
+                        <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Optimasi di Balik Layar</h2>
+                        <p className="text-slate-600 dark:text-slate-400 mt-2">Kami melakukan tuning manual agar laptop lama rasa baru.</p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-cyan-500/50 transition-colors">
+                            <Zap className="w-8 h-8 text-cyan-500 mb-4" />
+                            <h4 className="font-bold text-slate-900 dark:text-white mb-2">ZRAM Memory Compression</h4>
+                            <p className="text-sm text-slate-600 dark:text-slate-400">Teknologi kompresi RAM otomatis. Laptop RAM 2GB bakal terasa kayak pake 3GB-4GB. Multitasking lancar.</p>
+                        </div>
+                        <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-cyan-500/50 transition-colors">
+                            <Layout className="w-8 h-8 text-purple-500 mb-4" />
+                            <h4 className="font-bold text-slate-900 dark:text-white mb-2">Wine Protocol Handler</h4>
+                            <p className="text-sm text-slate-600 dark:text-slate-400">Konfigurasi khusus agar bisa menjalankan file .exe ringan dengan kompatibilitas lebih baik.</p>
+                        </div>
+                        <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-cyan-500/50 transition-colors">
+                            <Monitor className="w-8 h-8 text-blue-500 mb-4" />
+                            <h4 className="font-bold text-slate-900 dark:text-white mb-2">Font Rendering Patch</h4>
+                            <p className="text-sm text-slate-600 dark:text-slate-400">Tulisan di layar lebih tajam dan enak dibaca (Anti-Aliasing). Mata gak cepet lelah buat ngoding.</p>
+                        </div>
+                        <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-cyan-500/50 transition-colors">
+                            <CheckCircle2 className="w-8 h-8 text-green-500 mb-4" />
+                            <h4 className="font-bold text-slate-900 dark:text-white mb-2">Aggressive Bloatware Removal</h4>
+                            <p className="text-sm text-slate-600 dark:text-slate-400">Membuang aplikasi sampah. ISO lebih ramping, Storage lebih lega.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -241,7 +379,7 @@ export default function RaffiTechOSPage() {
                 </div>
             </section>
 
-            {/* Screenshots Section (Placeholder) */}
+            {/* Screenshots Section */}
             <section className="py-24 border-b border-slate-200 dark:border-white/5 bg-slate-100/50 dark:bg-slate-900/20">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="mb-12 text-center">
@@ -249,19 +387,40 @@ export default function RaffiTechOSPage() {
                         <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-3">Desktop Environment</h2>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-6">
-                        <div className="aspect-video bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center group hover:border-cyan-500/50 dark:hover:border-slate-600 transition-all p-4 shadow-sm hover:shadow-xl hover:-translate-y-1">
-                            <Monitor className="w-10 h-10 text-slate-400 dark:text-slate-700 mb-4 group-hover:text-cyan-600 dark:group-hover:text-cyan-500 transition-colors" />
-                            <span className="text-slate-500 text-sm font-mono">desktop_main.png</span>
+                    <div className="grid md:grid-cols-1 gap-6 max-w-4xl mx-auto">
+                        <div className="aspect-[16/9] bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center group hover:border-cyan-500/50 dark:hover:border-slate-600 transition-all p-2 shadow-sm hover:shadow-xl overflow-hidden relative">
+                            <Image
+                                src="/screenshots/desktop_v1.png"
+                                alt="RaffiTech OS Desktop"
+                                width={1280}
+                                height={720}
+                                className="rounded object-cover w-full h-full hover:scale-105 transition-transform duration-700"
+                            />
                         </div>
-                        <div className="aspect-video bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center group hover:border-cyan-500/50 dark:hover:border-slate-600 transition-all p-4 shadow-sm hover:shadow-xl hover:-translate-y-1">
-                            <Terminal className="w-10 h-10 text-slate-400 dark:text-slate-700 mb-4 group-hover:text-cyan-600 dark:group-hover:text-cyan-500 transition-colors" />
-                            <span className="text-slate-500 text-sm font-mono">terminal_neofetch.png</span>
-                        </div>
-                        <div className="aspect-video bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center group hover:border-cyan-500/50 dark:hover:border-slate-600 transition-all p-4 shadow-sm hover:shadow-xl hover:-translate-y-1">
-                            <Layout className="w-10 h-10 text-slate-400 dark:text-slate-700 mb-4 group-hover:text-cyan-600 dark:group-hover:text-cyan-500 transition-colors" />
-                            <span className="text-slate-500 text-sm font-mono">workflow_split.png</span>
-                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ SECTION */}
+            <section id="faq" className="py-24 border-b border-slate-200 dark:border-white/5">
+                <div className="max-w-4xl mx-auto px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-slate-900 dark:text-white flex items-center justify-center gap-3">
+                            <HelpCircle className="w-8 h-8 text-cyan-500" /> Sering Ditanyakan (FAQ)
+                        </h2>
+                    </div>
+
+                    <div className="grid gap-6">
+                        {faqs.map((faq, i) => (
+                            <div key={i} className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-cyan-500/30 transition-all">
+                                <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2 flex gap-3">
+                                    <span className="text-cyan-500">Q:</span> {faq.q}
+                                </h4>
+                                <p className="text-slate-600 dark:text-slate-400 pl-8 border-l-2 border-slate-100 dark:border-slate-800">
+                                    <span className="font-bold text-slate-700 dark:text-slate-300">A:</span> {faq.a}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -293,6 +452,12 @@ export default function RaffiTechOSPage() {
                                     </a>
                                 </Button>
 
+                                {/* Verified Badge */}
+                                <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-xs font-bold">
+                                    <ShieldCheck className="w-4 h-4" />
+                                    MD5 Verified & Malware Free
+                                </div>
+
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-2xl mt-4">
                                     <div className="bg-black/30 backdrop-blur border border-white/10 p-4 rounded-lg flex items-center justify-center gap-2 text-sm text-slate-300">
                                         <Globe className="w-4 h-4 text-slate-500" />
@@ -300,7 +465,7 @@ export default function RaffiTechOSPage() {
                                     </div>
                                     <div className="bg-black/30 backdrop-blur border border-white/10 p-4 rounded-lg flex items-center justify-center gap-2 text-sm text-slate-300">
                                         <HardDrive className="w-4 h-4 text-slate-500" />
-                                        <span>Size: 3.9 GB</span>
+                                        <span>Size: 3.6 GB</span>
                                     </div>
                                     <div className="bg-black/30 backdrop-blur border border-white/10 p-4 rounded-lg flex items-center justify-center gap-2 text-sm text-slate-300">
                                         <Box className="w-4 h-4 text-slate-500" />
@@ -398,6 +563,14 @@ export default function RaffiTechOSPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Footer Quote */}
+            <div className="py-8 bg-white dark:bg-slate-950 text-center border-t border-slate-200 dark:border-white/5">
+                <p className="text-slate-500 dark:text-slate-600 font-mono text-sm flex items-center justify-center gap-2">
+                    <Coffee className="w-4 h-4" />
+                    Made with ❤️ and plenty of coffee by RaffiTech.
+                </p>
+            </div>
 
             <Footer />
         </main>
