@@ -85,15 +85,25 @@ export default function DigitalProductsSection() {
                                     <span className={`text-lg font-bold ${product.free ? 'text-green-500' : 'text-foreground'}`}>
                                         {product.price}
                                     </span>
-                                    <a
-                                        href={`https://wa.me/62895328949434?text=Halo%20RaffiTech,%20saya%20mau%20beli%20${encodeURIComponent(product.name)}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1 text-sm text-primary hover:underline font-medium"
-                                    >
-                                        {product.free ? <Download className="w-4 h-4" /> : <ExternalLink className="w-4 h-4" />}
-                                        {product.free ? 'Download' : 'Beli'}
-                                    </a>
+                                    {product.href ? (
+                                        <Link
+                                            href={product.href}
+                                            className="inline-flex items-center gap-1 text-sm text-primary hover:underline font-medium"
+                                        >
+                                            <Download className="w-4 h-4" />
+                                            Lihat Detail
+                                        </Link>
+                                    ) : (
+                                        <a
+                                            href={`https://wa.me/62895328949434?text=Halo%20RaffiTech,%20saya%20mau%20beli%20${encodeURIComponent(product.name)}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-1 text-sm text-primary hover:underline font-medium"
+                                        >
+                                            {product.free ? <Download className="w-4 h-4" /> : <ExternalLink className="w-4 h-4" />}
+                                            {product.free ? 'Download' : 'Beli'}
+                                        </a>
+                                    )}
                                 </div>
                             </CardContent>
                         </Card>

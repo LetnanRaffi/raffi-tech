@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo/photo_6246947705343118562_y.jpg",
+        url: "/logo/raffitech-logo.png",
         width: 800,
         height: 600,
         alt: "RaffiTech Solutions Logo",
@@ -48,11 +48,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RaffiTech Solutions - Jasa IT Profesional",
     description: "Solusi teknologi terpercaya di Bekasi",
-    images: ["/logo/photo_6246947705343118562_y.jpg"],
+    images: ["/logo/raffitech-logo.png"],
   },
   icons: {
-    icon: "/logo/photo_6246947705343118562_y.jpg",
-    apple: "/logo/photo_6246947705343118562_y.jpg",
+    icon: "/logo/raffitech-logo.png",
+    apple: "/logo/raffitech-logo.png",
   },
 }
 
@@ -65,7 +65,7 @@ export default function RootLayout({
     <html lang="id" suppressHydrationWarning>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Suspense fallback={null}>
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
             {children}
           </ThemeProvider>
         </Suspense>

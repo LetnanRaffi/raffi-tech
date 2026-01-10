@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Image
-                src="/logo/photo_6246947705343118562_y.jpg"
+                src="/logo/raffitech-logo.png"
                 alt="RaffiTech Logo"
                 width={40}
                 height={40}
@@ -65,6 +65,11 @@ export default function Footer() {
               <li>
                 <Link href="/links" className="text-sidebar-foreground/80 hover:text-sidebar-primary transition-colors">
                   Bio Links
+                </Link>
+              </li>
+              <li>
+                <Link href="/raffitechos" className="text-sidebar-foreground/80 hover:text-sidebar-primary transition-colors">
+                  RaffiTech OS
                 </Link>
               </li>
             </ul>

@@ -140,8 +140,8 @@ export default function ChatWidget() {
             <div
                 className={cn(
                     "fixed z-50 transition-all duration-500 ease-out",
-                    // Mobile: Full screen with padding
-                    "inset-4 sm:inset-auto",
+                    // Mobile: Bottom sheet style, not full screen
+                    "bottom-0 left-0 right-0 mx-4 mb-4 sm:mx-0 sm:left-auto",
                     // Desktop: Bottom right positioned
                     "sm:bottom-6 sm:right-6 sm:w-[380px] sm:h-auto sm:max-h-[85vh]",
                     // Animation origins
@@ -152,8 +152,8 @@ export default function ChatWidget() {
                 )}
             >
                 <Card className={cn(
-                    "flex flex-col h-full sm:h-[520px] overflow-hidden",
-                    "border-0 sm:border",
+                    "flex flex-col h-[60vh] sm:h-[520px] overflow-hidden",
+                    "border",
                     "bg-background/95 backdrop-blur-xl",
                     "shadow-2xl shadow-black/20",
                     "rounded-2xl sm:rounded-3xl"

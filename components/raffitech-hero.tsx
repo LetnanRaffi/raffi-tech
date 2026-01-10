@@ -301,7 +301,7 @@ const Logo = ({ className }: { className?: string }) => {
   return (
     <div className={cn("flex items-center space-x-2", className)}>
       <Image
-        src="/logo/photo_6246947705343118562_y.jpg"
+        src="/logo/raffitech-logo.png"
         alt="RaffiTech Logo"
         width={36}
         height={36}
