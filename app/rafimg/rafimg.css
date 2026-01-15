@@ -1,0 +1,301 @@
+/* RafIMG Specific Styles */
+.rafimg-root {
+    --bg-primary: #0f0a0a;
+    --bg-secondary: #1a1010;
+    --bg-card: rgba(139, 21, 56, 0.05);
+    --bg-card-hover: rgba(139, 21, 56, 0.10);
+
+    --text-primary: #ffffff;
+    --text-secondary: #b0a0a5;
+    --text-muted: #706065;
+
+    --accent-primary: #8B1538;
+    --accent-secondary: #A91D3A;
+    --accent-tertiary: #C73659;
+    --accent-gradient: linear-gradient(135deg, #8B1538 0%, #A91D3A 50%, #C73659 100%);
+
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --error: #ef4444;
+
+    --border-color: rgba(139, 21, 56, 0.15);
+    --glass-bg: rgba(139, 21, 56, 0.03);
+    --glass-border: rgba(139, 21, 56, 0.12);
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 60px rgba(139, 21, 56, 0.15);
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+.rafimg-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse at top left, rgba(139, 21, 56, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(169, 29, 58, 0.06) 0%, transparent 50%),
+        var(--bg-primary);
+}
+
+.rafimg-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.rafimg-glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+}
+
+.rafimg-glass-card:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(139, 21, 56, 0.25);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+}
+
+.rafimg-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.rafimg-btn-primary {
+    background: var(--accent-gradient);
+    color: white;
+    box-shadow: 0 4px 20px rgba(139, 21, 56, 0.3);
+}
+
+.rafimg-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(139, 21, 56, 0.4);
+}
+
+.rafimg-btn-secondary {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.rafimg-btn-secondary:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-primary);
+}
+
+.rafimg-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 0;
+    background: rgba(15, 10, 10, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(139, 21, 56, 0.1);
+    z-index: 100;
+}
+
+.rafimg-nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rafimg-nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.rafimg-nav-brand span {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.rafimg-nav-links {
+    display: flex;
+    gap: 8px;
+}
+
+.rafimg-upload-zone {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 60px 40px;
+    text-align: center;
+    background: var(--glass-bg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rafimg-upload-zone:hover {
+    border-color: var(--accent-primary);
+    background: rgba(139, 21, 56, 0.05);
+}
+
+.rafimg-upload-zone.dragging {
+    border-color: var(--accent-primary);
+    background: rgba(139, 21, 56, 0.1);
+    transform: scale(1.02);
+}
+
+.rafimg-upload-zone-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: var(--accent-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 30px rgba(139, 21, 56, 0.3);
+}
+
+.rafimg-upload-zone-icon svg {
+    width: 36px;
+    height: 36px;
+    stroke: white;
+}
+
+.rafimg-upload-zone h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.rafimg-upload-zone p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.rafimg-tool-card {
+    position: relative;
+    padding: 32px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.rafimg-tool-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent-gradient);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.rafimg-tool-card:hover::before {
+    transform: scaleX(1);
+}
+
+.rafimg-tool-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--accent-gradient);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(139, 21, 56, 0.25);
+}
+
+.rafimg-tool-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: white;
+}
+
+.rafimg-tool-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.rafimg-tool-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@keyframes rafimg-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rafimg-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rafimg-animate-fade-in {
+    animation: rafimg-fade-in 0.6s ease forwards;
+}
+
+.rafimg-spinner {
+    animation: rafimg-spin 1s linear infinite;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .rafimg-container {
+        padding: 0 16px;
+    }
+
+    .rafimg-upload-zone {
+        padding: 40px 24px;
+    }
+
+    .rafimg-nav-links {
+        gap: 4px;
+    }
+
+    .rafimg-nav-links .rafimg-btn {
+        padding: 8px 14px !important;
+        font-size: 12px !important;
+    }
+}

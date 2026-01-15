@@ -113,7 +113,10 @@ export default function RaffiTechOSPage() {
                                 FAQ
                             </a>
                             <a href="#download" className="text-slate-600 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-white transition-colors">
-                                Download
+                                Download OS
+                            </a>
+                            <a href="#raffiburn" className="text-orange-600 hover:text-orange-500 dark:text-orange-400 dark:hover:text-orange-300 transition-colors font-semibold">
+                                RaffiBurn
                             </a>
                         </nav>
 
@@ -480,6 +483,84 @@ export default function RaffiTechOSPage() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* RaffiBurn Section */}
+            <section id="raffiburn" className="py-24 border-b border-slate-200 dark:border-white/5 bg-gradient-to-b from-orange-50/50 to-slate-50 dark:from-orange-950/10 dark:to-slate-950">
+                <div className="max-w-5xl mx-auto px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 text-xs font-bold uppercase tracking-wider mb-4">
+                            <Usb className="w-3 h-3" /> USB Burning Tool
+                        </div>
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">RaffiBurn</h2>
+                        <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                            Tool gratis untuk burning ISO ke flashdisk dengan mudah. Cross-platform, cepat, dan simple tanpa ribet.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Windows Version */}
+                        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 relative overflow-hidden group hover:border-orange-500/50 transition-all shadow-lg hover:shadow-xl">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                            <div className="relative z-10">
+                                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20">
+                                    <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Windows</h3>
+                                <p className="text-slate-600 dark:text-slate-400 text-sm mb-6">Compatible dengan Windows 10 & 11. Portable, tinggal extract dan jalankan.</p>
+                                <div className="space-y-3">
+                                    <a href="https://drive.google.com/file/d/YOUR_WINDOWS_LINK/view" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-orange-600 hover:to-red-700 transition-all shadow-lg shadow-orange-500/20">
+                                        <Download className="w-5 h-5" /> Download for Windows
+                                    </a>
+                                    <div className="text-xs text-slate-500 text-center">RaffiBurn.exe • ~15 MB • Portable</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Linux Version */}
+                        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 relative overflow-hidden group hover:border-orange-500/50 transition-all shadow-lg hover:shadow-xl">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                            <div className="relative z-10">
+                                <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-yellow-500/20">
+                                    <Terminal className="w-8 h-8 text-white" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Linux</h3>
+                                <p className="text-slate-600 dark:text-slate-400 text-sm mb-6">Tersedia dalam format AppImage. Jalankan di semua distro Linux tanpa install.</p>
+                                <div className="space-y-3">
+                                    <a href="https://drive.google.com/file/d/YOUR_LINUX_LINK/view" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-orange-600 hover:to-red-700 transition-all shadow-lg shadow-orange-500/20">
+                                        <Download className="w-5 h-5" /> Download for Linux
+                                    </a>
+                                    <div className="text-xs text-slate-500 text-center">RaffiBurn.AppImage • ~20 MB • Universal</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="mt-12 grid md:grid-cols-4 gap-4">
+                        <div className="bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-5 text-center">
+                            <Zap className="w-6 h-6 text-orange-500 mx-auto mb-2" />
+                            <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-1">Super Cepat</h4>
+                            <p className="text-xs text-slate-500">Optimized burning speed</p>
+                        </div>
+                        <div className="bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-5 text-center">
+                            <ShieldCheck className="w-6 h-6 text-green-500 mx-auto mb-2" />
+                            <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-1">100% Aman</h4>
+                            <p className="text-xs text-slate-500">No malware, open source</p>
+                        </div>
+                        <div className="bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-5 text-center">
+                            <Box className="w-6 h-6 text-purple-500 mx-auto mb-2" />
+                            <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-1">Portable</h4>
+                            <p className="text-xs text-slate-500">Tanpa perlu install</p>
+                        </div>
+                        <div className="bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-5 text-center">
+                            <Globe className="w-6 h-6 text-blue-500 mx-auto mb-2" />
+                            <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-1">Cross Platform</h4>
+                            <p className="text-xs text-slate-500">Windows & Linux</p>
                         </div>
                     </div>
                 </div>
